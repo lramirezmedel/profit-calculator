@@ -1,0 +1,65 @@
+<app-tool-bar title="Venta"></app-tool-bar>
+
+<ion-content class="ion-padding-top">
+
+  <ion-list mode="md" class="ion-padding-start ion-padding-end">
+    <form [formGroup]="fGroup">
+      <ion-row class="fix-one">
+        <ion-col size="6">
+          <ion-item mode="md">
+            <ion-label mode="md" position="stacked" class="fix-label">Total de monedas</ion-label>
+            <ion-input mode="md" type="number" readonly="true" formControlName="unidades"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item mode="md">
+            <ion-label mode="md" position="stacked" class="fix-label">Total invertido</ion-label>
+            <ion-input mode="md" type="number" readonly="true" formControlName="inversion"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="fix-one">
+        <ion-col size="6">
+          <ion-item mode="md">
+            <ion-label mode="md" position="stacked" class="fix-label">Precio unitario</ion-label>
+            <ion-input mode="md" type="number" readonly="true" formControlName="precio"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item mode="md">
+            <ion-label mode="md" position="stacked" class="fix-label">Porcentaje</ion-label>
+            <ion-input mode="md" type="number" formControlName="porcentaje" clearInput="true"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Venta</ion-label>
+        <ion-input mode="md" type="text" readonly="true" formControlName="venta"></ion-input>
+      </ion-item>
+
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Fee exchange</ion-label>
+        <ion-input mode="md" type="text" readonly="true" formControlName="fee_exchange"></ion-input>
+      </ion-item>
+
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Fee de venta</ion-label>
+        <ion-input mode="md" type="text" readonly="true" formControlName="fee"></ion-input>
+      </ion-item>
+
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Total por venta</ion-label>
+        <ion-input mode="md" type="text" readonly="true" formControlName="total"></ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <ion-item lines="none" class="item-buttons">
+    <ion-buttons slot="end">
+      <ion-button mode="md" color="primary" (click)="calcular_porcentaje()">Calcular</ion-button>
+    </ion-buttons>
+  </ion-item>
+
+</ion-content>

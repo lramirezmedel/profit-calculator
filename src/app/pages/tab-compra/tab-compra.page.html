@@ -1,0 +1,45 @@
+<app-tool-bar title="Compra"></app-tool-bar>
+
+<ion-content class="ion-padding-top">
+
+  <ion-list mode="md" class="ion-padding-start ion-padding-end">
+    <form [formGroup]="fGroup">
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Precio unitario</ion-label>
+        <ion-input mode="md" type="text" clearInput="true" formControlName="precio" (ionChange)="listener()"></ion-input>
+      </ion-item>
+      
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Inversión</ion-label>
+        <ion-input mode="md" type="text" clearInput="true" formControlName="cantidad" (ionChange)="listener()"></ion-input>
+      </ion-item>
+
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Total de monedas</ion-label>
+        <ion-input mode="md" type="text" readonly="true" formControlName="unidades"></ion-input>
+      </ion-item>
+
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Fee exchange</ion-label>
+        <ion-input mode="md" type="text" readonly="true" formControlName="fee_exchange"></ion-input>
+      </ion-item>
+
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Fee de compra</ion-label>
+        <ion-input mode="md" type="text" readonly="true" formControlName="fee"></ion-input>
+      </ion-item>
+
+      <ion-item mode="md">
+        <ion-label mode="md" position="stacked" class="fix-label">Total por compra</ion-label>
+        <ion-input mode="md" type="text" readonly="true" formControlName="total"></ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <ion-item lines="none" class="item-buttons">
+    <ion-buttons slot="end">
+      <ion-button mode="md" color="primary" (click)="calcular()">Calcular</ion-button>
+    </ion-buttons>
+  </ion-item>
+  
+</ion-content>
