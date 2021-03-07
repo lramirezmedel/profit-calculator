@@ -23,8 +23,8 @@ export class TabCompraPage implements OnInit {
     private emiter: EmiterService,
     private local: LocalService) { 
 
-      this.precio = new FormControl(0.2208, Validators.required);
-      this.cantidad = new FormControl(1235, Validators.required);
+      this.precio = new FormControl(0, Validators.required);
+      this.cantidad = new FormControl(0, Validators.required);
       this.unidades = new FormControl(0, Validators.required);
       this.fee_exchange = new FormControl(0.0750, Validators.required);
       this.fee = new FormControl(0, Validators.required);
