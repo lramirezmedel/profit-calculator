@@ -1,0 +1,7 @@
+{
+  "name": "profit-calculator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
